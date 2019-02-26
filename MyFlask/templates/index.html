@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        #all{
+            width:1240px;
+            margin: 0 auto;
+            text-align: center;
+        }
+       #all div{
+           display: inline-block;
+           vertical-align: top;
+       }
+        #content{
+            width:300px;
+        }
+        #content1{
+            width:300px;
+        }
+        #content2{
+            width:300px;
+        }
+        #content3{
+            width:300px;
+        }
+        .one{
+            width:284px;
+            text-align: center;
+            border:1px solid #ccc;
+            margin-bottom: 10px;
+            box-shadow:1px 3px 2px 3px #eeeeed;
+        }
+        img{
+            width:272px;
+            margin-top:6px;
+        }
+        a{
+            text-decoration:none;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+<div id="all">
+<div id="content">
+<!-- 一个 -->
+    {% for data1 in data1 %}
+    <div class="one">
+        <img src="{{ data1["img"] }}" alt="">
+        <a href="{{ data1["url"] }}"><h4>{{ data1['title'] }}</h4></a>
+    </div>
+    {% endfor %}
+</div>
+<!-- 二个 -->
+<div id="content1">
+    {% for data2 in data2 %}
+    <div class="one">
+        <img src="{{ data2["img"] }}" alt="">
+        <a href="{{ data2["url"] }}"><h4>{{ data2['title'] }}</h4></a>
+    </div>
+    {% endfor %}
+</div>
+<!-- 三个 -->
+<div id="content2">
+    {% for data3 in data3 %}
+    <div class="one">
+        <img src="{{ data3["img"] }}" alt="">
+        <a href="{{ data3["url"] }}"><h4>{{ data3['title'] }}</h4></a>
+    </div>
+    {% endfor %}
+</div>
+<!-- 四个 -->
+<div id="content3">
+    {% for data4 in data4 %}
+    <div class="one">
+        <img src="{{ data4["img"] }}" alt="">
+        <a href="{{ data4["url"] }}"><h4>{{ data4['title'] }}</h4></a>
+    </div>
+    {% endfor %}
+</div>
+</div>
+</body>
+</html>
